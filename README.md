@@ -22,7 +22,7 @@ Two native NEAR features make this work without any off-chain trust: **function-
 ## Live on testnet
 - Wallet contract: [`leash-wallet-44846.testnet`](https://testnet.nearblocks.io/address/leash-wallet-44846.testnet)
 - Owner: `leash-owner-44846.testnet` · Allowlisted merchant: `leash-shop-44846.testnet`
-- A recorded run is in [`docs/demo-run.txt`](docs/demo-run.txt), with nearblocks links for every transaction.
+- A recorded run is in [`docs/demo-run.txt`](docs/demo-run.txt), with nearblocks links for every transaction, and a 29-second video of it is [`docs/leash-demo.mp4`](docs/leash-demo.mp4).
 
 ## Try it (judges: do X → see Y)
 
