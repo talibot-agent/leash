@@ -1,0 +1,4 @@
+contract/target/
+demo/node_modules/
+*.key
+.env

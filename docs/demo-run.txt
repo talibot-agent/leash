@@ -1,0 +1,29 @@
+Leash demo on leash-wallet-44846.testnet
+policy: {"per_tx_cap":"500000000000000000000000","daily_cap":"1000000000000000000000000","approval_threshold":"250000000000000000000000","allowlist_only":true}
+
+▶ Agent buys 0.05 NEAR of API calls from an allowlisted merchant
+  ✔ allowed {"status":"sent","amount":"50000000000000000000000","spent_today":"400000000000000000000000"}
+    https://testnet.nearblocks.io/txns/2anNUEqiQMyXyVMD12CbAaKp4hYQzGMkb4pjqD8mxQhx
+
+▶ Prompt-injected agent tries to pay an unknown account
+  ✖ blocked: recipient not allowlisted
+
+▶ Agent tries a 0.3 NEAR purchase (above 0.25 approval threshold)
+  ✔ allowed {"status":"queued","id":1}
+    https://testnet.nearblocks.io/txns/F2f7sJ5X5FwoWzJ1T5Pg5cMu2PvaYb1JPTtAZ447YUgr
+
+▶ Agent tries to change its own limits
+  ✖ blocked: MethodNameMismatch
+
+▶ Agent tries a raw transfer that skips the contract
+  ✖ blocked: NotEnoughAllowance
+
+queued for human approval: [{"id":1,"receiver":"leash-shop-44846.testnet","amount":"300000000000000000000000","memo":"bulk dataset","created_ns":1794245159033063400}]
+
+▶ Human leash-owner-44846.testnet approves request #1
+  ✔ allowed "300000000000000000000000"
+    https://testnet.nearblocks.io/txns/27Z6kWMxBU7CzzoNvDqAjKsuJq8h9zk49nAbbnB4B6m9
+
+stats: spent today 0.7 NEAR, remaining today 0.3 NEAR, total sent 0.7 NEAR, payments 4
+
+6/6 expectations met
